@@ -1,0 +1,65 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+/* Image by <a href="https://pixabay.com/users/fremar1970-121909/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=279694">Marcel Fremar</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=279694">Pixabay</a> */
+/* Image by <a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8830772">Gordon Johnson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8830772">Pixabay</a> */
+
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap");
+
+:root {
+  --font-color: #C8ACD6;
+  --header-color: #ffffff;
+  --bg-color: #514b92;
+
+  --border-color: var(--font-color);
+  --link-color: blue;
+  --visited-link-color: C8ACD6;
+}
+
+.blog-title {
+  font-family: "Playwrite HR Lijeva", cursive;
+  color: #fff !important;
+  font-style: italic;
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: rgb(173, 38, 133) 5px 10px;
+  width: 100%;
+  position: relative;
+  top: 40px;
+}
+
+.gif-container {
+  display: flex;
+  align-items: center;
+}
+
+.active:visited {
+  color: var(--link-color) !important;
+}
+
+.active:visited {
+  color: var(--link-color) !important;
+}
+
+.gif-md,
+.gif-sm,
+.gif-lg {  
+  height: 0;
+  position: relative;
+}
+
+.gif-lg {
+  width: 35%;
+  padding-bottom: 35%;
+}
+
+.gif-md {
+  width: 25%;
+  padding-bottom: 25%;
+}
+
+.gif-sm {  
+  width: 15%;
+  padding-bottom: 15%;
+}
