@@ -15,7 +15,7 @@
 //==[ 1. BASIC INFO ]==
 
 let blogName = "<b>When They Cry</b>";
-let authorName = "Eric Moura";
+let authorName = "Eric";
 let authorLink = "https://linktr.ee/ericericeri_"; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
 
 //-----------------------------
@@ -34,8 +34,7 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-["posts/My-First-Post.html"],
-[ "posts/2020-11-10-My-Second-Post.html" ]
+["posts/Who-am-I.html"],
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -68,7 +67,7 @@ let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></l
 
 //Generate the Footer HTML, which uses the variables defined in the BASIC INFO section above to list info about the site.
 //Note: feel free to remove the references to Zonelets and Neocities! Just be careful not to delete any necessary HTML closing tags or other syntax.
-let footerHTML = "<hr><p>" + blogName + " is written by <a class='active' href='" + authorLink + "'>" + authorName + "</a>";
+let footerHTML = "<hr><p>This blog is written by <a class='active' href='" + authorLink + "'>" + authorName + "</a>";
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
