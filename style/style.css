@@ -4,6 +4,7 @@
 
 body {
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(243, 48%, 16%, 1)'/><path d='M45.69 13.342c-1.677.945-3.557 1.6-5.48 1.588-1.922-.012-3.795-.691-5.462-1.653-1.668-.962-3.156-2.202-4.637-3.435-1.48-1.232-2.97-2.47-4.641-3.427-1.67-.957-3.547-1.628-5.47-1.628-1.923 0-3.8.67-5.47 1.628-1.67.956-3.161 2.195-4.641 3.427-1.48 1.233-2.97 2.473-4.637 3.435-1.667.962-3.54 1.641-5.463 1.653-1.922.012-3.802-.643-5.478-1.588v13.316c1.676-.945 3.556-1.6 5.478-1.588 1.923.012 3.796.691 5.463 1.653 1.668.962 3.156 2.202 4.637 3.435 1.48 1.232 2.97 2.47 4.641 3.427 1.67.957 3.547 1.628 5.47 1.628 1.923 0 3.8-.67 5.47-1.628 1.67-.956 3.161-2.195 4.641-3.427 1.48-1.233 2.97-2.473 4.637-3.435 1.667-.962 3.54-1.641 5.463-1.653 1.922-.012 3.802.643 5.478 1.588z'  stroke-width='1' stroke='hsla(249, 51%, 28%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-160,-160)' fill='url(%23a)'/></svg>");
+  
   font-size: 18px;  
   font-family: Georgia, "Times New Roman", serif;
   margin: 0;
@@ -83,6 +84,7 @@ h5 {
   color: var(--font-color);
   background-color: var(--bg-color);
   outline: 2px dashed var(--border-color);
+  box-shadow: 8px 8px 15px black;
 }
 
 #content {
@@ -121,17 +123,39 @@ h5 {
 /*POST LIST STYLE*/
 #postlistdiv ul {
   font-size: 1.2em;
-  padding: 0;
-  list-style-type: none;
+  padding-left: 50px;
+  list-style-type: disc;  
+  color: black;
 }
 #recentpostlistdiv ul {
   font-size: 1em;
-  padding: 0;
-  list-style-type: none;
+  padding-left: 50px;
 }
 .moreposts {
   font-size: 0.8em;
   margin-top: 0.2em;
+}
+
+.post {
+  line-height: 40px;
+}
+.post a {
+  text-decoration: none;
+  border-bottom: 2px dashed;
+  margin-right: 10px;
+  color: rgb(37, 37, 212);
+}
+.post a:visited {
+  color: rgb(123, 15, 211);  
+}
+.post .date {
+  font-weight: 600;
+}
+
+#pinned-posts {
+  background-color: var(--bg-light-color);
+  padding: 15px 50px !important;
+  color: black;
 }
 
 /*NEXT AND PREVIOUS LINKS STYLE*/
@@ -165,6 +189,6 @@ h5 {
 
 @media screen and (max-width: 400px) {
   #blog {
-    width: 90%;
+    width: 95%;
   }
 }

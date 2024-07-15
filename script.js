@@ -34,7 +34,7 @@ let postsArray = [
 //[ "posts/2020-11-10-Special-Characters-Example.html", encodeURI( 'Spéci@l "Character\'s" Examp|e' ) ],
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
-["posts/Who-am-I.html"],
+["posts/2024-04-18-Who-am-I.html"],
 ];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -77,9 +77,9 @@ if ( ! currentFilename.endsWith(".html") ) {
     currentFilename += ".html";
 }
 let i;
-for (i = 0; i < postsArray.length; i++) {
-  if ( postsArray[i][0] === currentFilename ) {
-    currentIndex = i;
+for (l = 0; l < postsArray.length; l++) {
+  if ( postsArray[l][0] === currentFilename ) {
+    currentIndex = l;
   }
 }
 
@@ -139,21 +139,22 @@ function formatPostLink(i) {
     }
   }
   if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+    let postDate = postsArray[i][0].slice(6,16);
+    console.log(postDate)    
+    return `<li class="post"><a href="${relativePath}/${postsArray[i][0]}">${postTitle_i}</a> <span class="date">${postDate}</span></li>`;
   } else {
     return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
   }
 }
 
-let postListHTML = "<ul>";
+let postListHTML = "";
 for ( let i = 0; i < postsArray.length; i++ ) {
   postListHTML += formatPostLink(i);
 }
-postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
 let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostListHTML = "<h2>Pinned Posts:</h2><ul id='pinned-posts'>";
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   recentPostListHTML += formatPostLink(i);

@@ -1,20 +1,31 @@
 /* Color palette: */
 /* https://colorhunt.co/palette/17153b2e236c433d8bc8acd6 */
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap");
 :root {
+  --danger: #ecd671;
+  --primary: #72b9e9;
+  --success: #80e972;
   --warning: #e66666;
-  --header-color: #d2bddd;
 
-  --font-color: #d2bddd;
-  --bg-color: #433D8B;
-  --border-color: #C8ACD6;
+  --font-color: #d2bddd;  
+  --header-color: #d2bddd;
   --link-color: rgb(129, 198, 255);
   --visited-link-color: rgb(201, 67, 241);
+  
+  --bg-light-color: #c8acd6;
+  --bg-color: #433D8B;
+  --bg-darker-color: #2e236c;
+  --border-color: #C8ACD6;
 }
 
 .warning {
   color: var(--warning) !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .blog-title a {
@@ -36,6 +47,15 @@
   width: 100%;
   position: relative;
   top: 60px;
+}
+
+.date {
+  font-family: "Rubik", sans-serif;
+  word-spacing: 5px;
+  color: #005500;
+  line-height: 0;
+  font-size: 16px;
+  margin-bottom: 50px;
 }
 
 /* Link styles */
